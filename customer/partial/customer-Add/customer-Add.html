@@ -1,0 +1,39 @@
+<div class="col-md-12">
+	<div class="col-md-12">
+		<label><h2>Add Customer</h2></label>
+	</div>
+	<div class="row">
+		<form class="form-horizontal" name="custForm" role="form" novalidate>
+			<div class="row">
+				<div class="col-md-6 form-group" >
+					<label class="col-md-4 control-label">Name</label>
+					<input class="col-md-8" type="text" ng-model="customer.name" name="name" required>
+					<p ng-show="submitted && custForm.name.$invalid === true">*Name is required</p>
+				</div>
+
+				<div class="col-md-6 form-group" >
+					<label class="col-md-4 control-label">Location </label>
+					<select name="location" ng-model="customer.location" required>
+						<option ng-repeat="location in locations" value="{{location}}">{{location}}</option>
+					</select>
+					<p ng-show="submitted && custForm.location.$invalid === true">*Location is required</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 form-group" >
+					<label class="col-md-4 control-label">Email</label>
+					<input class="col-md-8" type="text" ng-model="customer.email" name="email" required>
+					<p ng-show="submitted && custForm.email.$invalid === true">*Email is required</p>
+				</div>	
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 form-group">
+					<button class="col-md-3 btn btn-default col-md-offset-3" ng-click="cancel();">Cancel</button>
+					<button class="col-md-3 btn btn-primary col-md-offset-3" ng-click="save();">Save</button>
+				</div>	
+			</div>
+		</form>					
+	</div>
+</div>

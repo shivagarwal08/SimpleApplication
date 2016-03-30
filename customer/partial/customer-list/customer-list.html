@@ -1,0 +1,29 @@
+<div class="col-md-12">
+	<div class="col-md-12">
+		<label><h2> Customers </h2></label>
+	</div>
+
+	<div class="row">
+		<div class="col-md-6 col-md-offset-4">
+			<a ui-sref="customerAdd" class="col-md-2">Add New</a>
+			<span class="col-md-offset-1 glyphicons glyphicons-search">Search</span>
+			<input type="text" ng-model="search">
+		</div>
+	</div>
+
+	<div class="row">
+		<table class="col-md-12" border="1px solid black;">
+			<tr>
+				<th class="col-md-4">Name <a><span ng-click="order = !order;">{{order===true?'Asc':'Des'}}</span></a></th>
+				<th class="col-md-4">Location</th>
+				<th class="col-md-4">Email ID</th>
+			</tr>
+
+			<tr ng-repeat="customer in customers | filter:search | orderBy:'name':order" customer-record class="customerRecord">
+				<td class="col-md-4">{{customer.name}}</td>
+				<td class="col-md-4">{{customer.location}}</td>
+				<td class="col-md-4">{{customer.email}} <a ng-click="delete(customer);">&times; </a></td>
+			</tr>
+		</table>
+	</div>
+</div>

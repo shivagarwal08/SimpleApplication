@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+  <link rel="stylesheet" href="bower_components/css/bootstrap.css">
+  <link rel="stylesheet" href="bower_components/css/bootstrap-theme.css">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+  <script src="bower_components/js/jquery.min.js"></script>  
+  <script src="bower_components/js/bootstrap.min.js"></script>
+  <script src="bower_components/js/angular.js"></script>  
+  <script src="bower_components/js/angular-ui-router.min.js"></script>
+  <script src="bower_components/js/ui-bootstrap-tpls.js"></script>  
+  <script src="bower_components/js/ui-utils.js"></script>
+  <script src="bower_components/js/angular-local-storage.js"></script>
+  <!-- Add New Bower Component JS Above -->
+
+
+  <!-- Main App JS -->
+  <script src="app.js"></script>
+  <script src="customer/customer.js"></script>
+  <script src="customer/partial/customer-Add/customer-Add.js"></script>
+  <script src="customer/partial/customer-list/customer-list.js"></script>
+  <script src="customer/service/customer-service.js"></script>
+  <!-- Add New Component JS Above -->
+
+  <div>
+    <div id="content" class="container">
+      <div class="row">
+        <h3>Angular Demo Application</h3>
+        <div ui-view>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
